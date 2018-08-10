@@ -121,156 +121,82 @@ nav ul a:hover {
 
 /* Main */
 
-.main-background {
-    background-image: url(../img/mercedes.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100vh;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;    
-}
-
-.main-background h1 {
-    font-size: 7rem;
-    color: #ffffff;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
-
-@media (max-width:550px) {
-    .main-background h1 {
-        font-size: 4rem;
-    }
-}
-
-.offer-panel {
+.title {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5rem;
+    align-items: center; 
+    margin: 5rem 0;   
 }
 
-.offer-title {
-    margin-bottom: 4rem;
+.title h1, .sellers-title h1 {
     font-size: 3rem;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    justify-items: center;
-    text-align: center;
-    grid-gap: 3rem;
-}
-
-@media (max-width: 1210px) {
-    .cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 620px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-}
-
-.item-panel {
-    background-color: #ffffff;
-    padding-bottom: 6rem;
-    border-radius: 5px;
-}
-
-.price {
+.description {
     font-size: 2rem;
-    color: #5dc302;
-    font-weight: 600;
+    width: 80%;
 }
 
-.image-panel {
-    width: 16.640rem;
-    height: auto;
-}
-
-.image-panel img {
-    width: 100%;
-}
-
-.image-panel img:hover {
-    overflow: hidden;
-    transform: scale(1.2);
-    transition: all .5s ease;
-}
-
-.financing-area {
+.sellers {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 35rem;
-    color: #ffffff;
-    font-size: 1.5rem;
-    text-align: center;
+    margin: 10rem 0;
 }
 
-.saiba-mais {
-    padding: 0 20px;
-    margin-top: 7rem; 
-    
+.seller {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    justify-content: space-around;
 }
 
-.saiba-mais a, .saiba-mais a:visited {
-    text-decoration: none;
-    background-color: #2f2e2e;
-    color: #ffffff;
-    padding: 1rem;
-    font-size: 1rem;
+@media (max-width:620px) {
+    .seller {
+        width: 100%;
+    }
 }
 
-.brand {
+@media (max-width:620px) {
+    .seller {
+        flex-direction: column;        
+    }
+}
+
+.seller-01 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 35rem;
 }
 
-.brand-icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 5rem;
-    grid-gap: 2rem;
-}
-
-.brand-item img {
-    width: 5vw;
-    min-width: 3rem;
-    height: auto;
-}
-
-.second-background {
-    background-image: url(../img/dirigindo-carro04.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 35rem;
-    min-height: 400px;
+.seller-02 {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    font-size: 7rem;
-    color: #ecece2;
+}
+
+.seller-picture img {
+    border-radius: 50%;
+    width: 15rem;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0 , 0, .4);
+}
+
+@media (max-width:870px) {
+    .seller-picture img {
+        width: 10rem;
+    }    
+}
+
+@media (max-width:620px) {
+    .seller-picture img {
+        margin-top: 2rem;
+    }    
+}
+
+.seller-name {
+    font-size: 2rem;
+    font-weight: 700;
 }
 /* END Main */
 
@@ -290,21 +216,12 @@ footer {
     align-items: center;
 }
 
-.footer-map {
-    padding: 2rem 0rem;
-}
-
-.footer-map iframe{
-    width: 100vw;
-    height: 30vh;
-}
-
 .footer-contact {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;    
+    width: 100%;   
 }
 
 @media (max-width:1024px) {
@@ -350,7 +267,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-size: 3rem;      
+    font-size: 3rem;        
 }
 
 .social ul li {

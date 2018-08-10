@@ -121,157 +121,118 @@ nav ul a:hover {
 
 /* Main */
 
-.main-background {
-    background-image: url(../img/mercedes.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100vh;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;    
-}
-
-.main-background h1 {
-    font-size: 7rem;
-    color: #ffffff;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
-
-@media (max-width:550px) {
-    .main-background h1 {
-        font-size: 4rem;
-    }
-}
-
-.offer-panel {
+.title {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 5rem;
+    margin: 6rem 0 10rem 0;
 }
 
-.offer-title {
-    margin-bottom: 4rem;
-    font-size: 3rem;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    justify-items: center;
+.title div h1 {
     text-align: center;
-    grid-gap: 3rem;
+    margin: 4rem;
 }
 
-@media (max-width: 1210px) {
-    .cards {
-        grid-template-columns: repeat(3, 1fr);
+.icons-section {
+    display: flex;
+    width: 80vw; 
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@media (max-width:360px) {
+    .icons-section {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-@media (max-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
+.icons {
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    max-width: 15vw;
+}
+
+@media (max-width:360px) {
+    .icons {
+        max-width: 100%;
     }
 }
 
-@media (max-width: 620px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
+.icon-img {
+    font-size: 5rem;
 }
 
-.item-panel {
-    background-color: #ffffff;
-    padding-bottom: 6rem;
-    border-radius: 5px;
-}
-
-.price {
-    font-size: 2rem;
-    color: #5dc302;
-    font-weight: 600;
-}
-
-.image-panel {
-    width: 16.640rem;
-    height: auto;
-}
-
-.image-panel img {
-    width: 100%;
-}
-
-.image-panel img:hover {
-    overflow: hidden;
-    transform: scale(1.2);
-    transition: all .5s ease;
-}
-
-.financing-area {
+.finance-brand {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 35rem;
-    color: #ffffff;
-    font-size: 1.5rem;
+    margin-bottom: 6rem;
+}
+
+.finance-brand h2 {
     text-align: center;
 }
 
-.saiba-mais {
+.icon-brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;    
+}
+
+@media (max-width:460px) {
+    .icon-brand {
+        flex-direction: column;
+    }
+}
+
+.icon-brand img {
+    margin: 4rem 2rem 4rem 2rem;
+}
+
+@media (max-width:730px) {
+    .icon-brand img {
+        width: 10rem;
+    }
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15rem;
+}
+
+.compre-agora {
     padding: 0 20px;
     margin-top: 7rem; 
     
 }
 
-.saiba-mais a, .saiba-mais a:visited {
+.compre-agora a, .compre-agora a:visited {
     text-decoration: none;
     background-color: #2f2e2e;
     color: #ffffff;
-    padding: 1rem;
-    font-size: 1rem;
+    padding: 3rem;
+    font-size: 1.8rem;
 }
 
-.brand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 35rem;
+@media (max-width:530px) {
+    .compre-agora a, .compre-agora a:visited {
+        font-size: 1rem;
+    }
 }
 
-.brand-icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 5rem;
-    grid-gap: 2rem;
+@media (max-width:360px) {
+    .compre-agora a, .compre-agora a:visited {
+        font-size: 0.9rem;
+        padding: 2rem;
+    }
 }
 
-.brand-item img {
-    width: 5vw;
-    min-width: 3rem;
-    height: auto;
-}
-
-.second-background {
-    background-image: url(../img/dirigindo-carro04.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 35rem;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 7rem;
-    color: #ecece2;
-}
 /* END Main */
 
 /* Footer */
@@ -290,21 +251,12 @@ footer {
     align-items: center;
 }
 
-.footer-map {
-    padding: 2rem 0rem;
-}
-
-.footer-map iframe{
-    width: 100vw;
-    height: 30vh;
-}
-
 .footer-contact {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;    
+    width: 100%;   
 }
 
 @media (max-width:1024px) {
@@ -350,7 +302,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-size: 3rem;      
+    font-size: 3rem;        
 }
 
 .social ul li {

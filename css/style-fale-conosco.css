@@ -121,157 +121,135 @@ nav ul a:hover {
 
 /* Main */
 
-.main-background {
-    background-image: url(../img/mercedes.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100vh;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;    
-}
-
-.main-background h1 {
-    font-size: 7rem;
-    color: #ffffff;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
-
-@media (max-width:550px) {
-    .main-background h1 {
-        font-size: 4rem;
-    }
-}
-
-.offer-panel {
+.content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5rem;
+    justify-items: center;
+    align-items: center;    
 }
 
-.offer-title {
-    margin-bottom: 4rem;
+.title {
+    margin: 3rem 0; 
+}
+
+.title h1 {    
     font-size: 3rem;
 }
 
-.cards {
+.main-panel {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+        "left center right";
+    grid-gap: 0 2rem;
+    width: 90%;
+    height: 55%;
+    align-items: center;
+    align-content: center;
     justify-items: center;
-    text-align: center;
-    grid-gap: 3rem;
+    margin: 5rem 0;
 }
 
-@media (max-width: 1210px) {
-    .cards {
-        grid-template-columns: repeat(3, 1fr);
+@media (max-width:1024px) {
+    .main-panel {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "left center"
+            "right right";
     }
 }
 
-@media (max-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 620px) {
-    .cards {
+@media (max-width:670px) {
+    .main-panel {
         grid-template-columns: 1fr;
+        grid-template-areas: 
+            "left"
+            "center"
+            "right";
     }
 }
 
-.item-panel {
-    background-color: #ffffff;
-    padding-bottom: 6rem;
-    border-radius: 5px;
+.left {
+    grid-area: left;
+    width: 100%;
+    min-width: 300px;
 }
 
-.price {
-    font-size: 2rem;
-    color: #5dc302;
-    font-weight: 600;
+.contact-title {
+    background-color: #358caa;
+    color: #ffffff;
+    padding: 5rem;
 }
 
-.image-panel {
-    width: 16.640rem;
-    height: auto;
+.form-panel {
+    grid-area: center;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: #687377;
+    width: 50%;
+    min-width: 300px;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    padding: 2rem 0;
 }
 
-.image-panel img {
+.form-group-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group-input input[type=text] {
     width: 100%;
 }
 
-.image-panel img:hover {
-    overflow: hidden;
-    transform: scale(1.2);
-    transition: all .5s ease;
+.form-group-textarea {
+    width: 50%;
 }
 
-.financing-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 35rem;
+form input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group-button input {
+    background-color: #5dc302;
+    border-color: #5dc302;
     color: #ffffff;
-    font-size: 1.5rem;
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.right {
+    grid-area: right;
+    width: 100%;
+    min-width: 300px;
+    height: 100%; 
+}
+
+.right h1 {
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
-.saiba-mais {
-    padding: 0 20px;
-    margin-top: 7rem; 
-    
+.footer-map {
+    height: 80%;
 }
 
-.saiba-mais a, .saiba-mais a:visited {
-    text-decoration: none;
-    background-color: #2f2e2e;
-    color: #ffffff;
-    padding: 1rem;
-    font-size: 1rem;
+.footer-map iframe{
+    width: 100%;
+    height: 100%;
 }
 
-.brand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 35rem;
-}
-
-.brand-icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 5rem;
-    grid-gap: 2rem;
-}
-
-.brand-item img {
-    width: 5vw;
-    min-width: 3rem;
-    height: auto;
-}
-
-.second-background {
-    background-image: url(../img/dirigindo-carro04.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 35rem;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 7rem;
-    color: #ecece2;
-}
 /* END Main */
 
 /* Footer */
@@ -290,21 +268,12 @@ footer {
     align-items: center;
 }
 
-.footer-map {
-    padding: 2rem 0rem;
-}
-
-.footer-map iframe{
-    width: 100vw;
-    height: 30vh;
-}
-
 .footer-contact {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;    
+    width: 100%;   
 }
 
 @media (max-width:1024px) {
@@ -350,7 +319,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-size: 3rem;      
+    font-size: 3rem;        
 }
 
 .social ul li {

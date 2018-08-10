@@ -121,31 +121,6 @@ nav ul a:hover {
 
 /* Main */
 
-.main-background {
-    background-image: url(../img/mercedes.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 100vh;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;    
-}
-
-.main-background h1 {
-    font-size: 7rem;
-    color: #ffffff;
-    text-shadow: black 0.1em 0.1em 0.2em;
-}
-
-@media (max-width:550px) {
-    .main-background h1 {
-        font-size: 4rem;
-    }
-}
-
 .offer-panel {
     display: flex;
     flex-direction: column;
@@ -157,6 +132,12 @@ nav ul a:hover {
 .offer-title {
     margin-bottom: 4rem;
     font-size: 3rem;
+}
+
+@media (max-width:360px) {
+    .offer-title {
+        font-size: 2.6rem;
+    }
 }
 
 .cards {
@@ -186,9 +167,31 @@ nav ul a:hover {
 }
 
 .item-panel {
-    background-color: #ffffff;
-    padding-bottom: 6rem;
+    background-color: #ffffff;    
     border-radius: 5px;
+}
+
+.car-name {
+    margin-bottom: 3rem;
+}
+
+table {
+    border-collapse: collapse; 
+    width: 100%;  
+    margin-bottom: 2rem;
+}
+
+table td {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
 }
 
 .price {
@@ -212,66 +215,6 @@ nav ul a:hover {
     transition: all .5s ease;
 }
 
-.financing-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 35rem;
-    color: #ffffff;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.saiba-mais {
-    padding: 0 20px;
-    margin-top: 7rem; 
-    
-}
-
-.saiba-mais a, .saiba-mais a:visited {
-    text-decoration: none;
-    background-color: #2f2e2e;
-    color: #ffffff;
-    padding: 1rem;
-    font-size: 1rem;
-}
-
-.brand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 35rem;
-}
-
-.brand-icons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 5rem;
-    grid-gap: 2rem;
-}
-
-.brand-item img {
-    width: 5vw;
-    min-width: 3rem;
-    height: auto;
-}
-
-.second-background {
-    background-image: url(../img/dirigindo-carro04.png);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    height: 35rem;
-    min-height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 7rem;
-    color: #ecece2;
-}
 /* END Main */
 
 /* Footer */
@@ -290,21 +233,12 @@ footer {
     align-items: center;
 }
 
-.footer-map {
-    padding: 2rem 0rem;
-}
-
-.footer-map iframe{
-    width: 100vw;
-    height: 30vh;
-}
-
 .footer-contact {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 100%;    
+    width: 100%;   
 }
 
 @media (max-width:1024px) {
@@ -350,7 +284,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    font-size: 3rem;      
+    font-size: 3rem;        
 }
 
 .social ul li {
